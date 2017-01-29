@@ -7,11 +7,13 @@ Initial task requirements are in the /docs folder.
 > Clone/Download the repo then
 
 ```bash
-cd client-details
+cd angular2-client-details
 
 # install NPM packages
 npm install
 
 # start the server
 npm start
+
+# go to http://localhost:5000/
 ```
