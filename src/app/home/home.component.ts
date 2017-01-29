@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit {
     }
 
     const flattenProperties = (obj) => Object.keys(obj)
+      .filter((key) => key !== 'avatar')
       .map((key) => obj[key])
       .map((prop) => typeof prop === 'object' ? flattenProperties(prop) : prop);
 
