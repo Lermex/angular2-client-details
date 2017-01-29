@@ -1,0 +1,38 @@
+<md-sidenav-container class="contact-list-container">
+  <md-sidenav class="contact-list-sidenav" mode="side" opened="true">
+    <div class="contact-list-search">
+      <md-input-container class="contact-list-search-input">
+        <input
+          md-input
+          [(ngModel)]="searchQuery"
+          placeholder="Search"
+          autofocus>
+      </md-input-container>
+
+      <img src="/assets/img/ic_search_black_24px.svg">
+    </div>
+
+    <md-list class="contact-list">
+      <md-list-item class="contact-list-item" *ngFor="let client of filteredClients" (click)="clientClicked(client)">
+        <img md-list-avatar src="{{ client.general.avatar }}">
+        <h3 md-line>{{ client.general.firstName }} {{ client.general.lastName }}</h3>
+        <small md-line>{{ client.job.title }}</small>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <div class="contact-list-content">
+    <md-card *ngIf="selectedClient">
+      <img src="{{ selectedClient.general.avatar }}">
+      <h1>{{ selectedClient.general.firstName }} {{ selectedClient.general.lastName }}</h1>
+      <h2>{{ selectedClient.job.title }} - {{ selectedClient.job.company }}</h2>
+      <div>{{ selectedClient.address.street }}</div>
+      <div>{{ selectedClient.address.city }}, {{ selectedClient.address.country }}</div>
+      <div>{{ selectedClient.address.zipCode }}</div>
+      <md-card-actions>
+        <a href="#" md-button color="primary">{{ selectedClient.contact.email }}</a>
+        <a href="#" md-button color="primary">{{ selectedClient.contact.phone }}</a>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-sidenav-container>

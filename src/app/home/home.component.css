@@ -1,0 +1,35 @@
+.contact-list-container {
+  height: 100%;
+}
+
+.contact-list-search {
+  padding: 16px 16px 0;
+}
+
+.contact-list-search-input {
+  width: 90%;
+}
+
+.contact-list-sidenav {
+  min-width: 350px;
+}
+
+.contact-list-content {
+  height: 100%;
+  padding: 32px;
+}
+
+.contact-list-item:hover {
+  background-color: rgba(103, 58, 183, 0.12);
+  cursor: pointer;
+}
+
+.contact-list {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.cdk-focus-trap-content {
+  display: flex;
+  flex-direction: column;
+}
