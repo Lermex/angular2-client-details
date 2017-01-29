@@ -33,3 +33,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.contact-list-card-avatar {
+  padding: 16px;
+  float: left;
+}
+
+.contact-list-card-right {
+  text-align: right;
+}

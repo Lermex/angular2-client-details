@@ -23,13 +23,15 @@
 
   <div class="contact-list-content">
     <md-card *ngIf="selectedClient">
-      <img src="{{ selectedClient.general.avatar }}">
+      <img class="contact-list-card-avatar" src="{{ selectedClient.general.avatar }}">
       <h1>{{ selectedClient.general.firstName }} {{ selectedClient.general.lastName }}</h1>
       <h2>{{ selectedClient.job.title }} - {{ selectedClient.job.company }}</h2>
-      <div>{{ selectedClient.address.street }}</div>
-      <div>{{ selectedClient.address.city }}, {{ selectedClient.address.country }}</div>
-      <div>{{ selectedClient.address.zipCode }}</div>
-      <md-card-actions>
+      <div class="contact-list-card-right">
+        <div>{{ selectedClient.address.street }}</div>
+        <div>{{ selectedClient.address.city }}, {{ selectedClient.address.country }}</div>
+        <div>{{ selectedClient.address.zipCode }}</div>
+      </div>
+      <md-card-actions class="contact-list-card-right">
         <a href="#" md-button color="primary">{{ selectedClient.contact.email }}</a>
         <a href="#" md-button color="primary">{{ selectedClient.contact.phone }}</a>
       </md-card-actions>
